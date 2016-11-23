@@ -1,0 +1,87 @@
+#!/bin/bash
+#|¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨|
+#| UNIPÊ Centro Univertário de João Pessoa   |
+#| Aluno: Jefferson Felix Gomes              |
+#| Matrícula: 1510010879                     |
+#| Email: jeffersonfelix15@hotmail.com       |
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+saida="não"
+until [ $saida = "sim" ]
+do
+echo
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨¨¨¨¨¨¨Calculator¨¨¨¨¨¨¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+echo "[1] --Somar"
+echo "[2] --Subtrair"
+echo "[3] --Dividir"
+echo "[4] --Multiplicar"
+echo "[5] --Sair"
+echo
+echo "OBS: UTILIZE ESPAÇOS EX: (NÚMERO OPERAÇÃO NÚMERO)"
+echo
+echo -n "Digite a sua opção: "
+read opcao
+case $opcao in
+
+1)
+clear
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está somando!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+
+. calculadora2
+echo -n "Digite os valores: "
+somar
+echo "O resultado é : $?"
+;;
+
+2)
+clear
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está subtraindo!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+
+. calculadora2
+echo -n "Digite os valores: "
+sub
+echo "O resultado é : $?"
+;;
+
+3)
+clear
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está dividindo!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+
+. calculadora2
+echo -n "Digite os valores: "
+div
+echo "O resultado é : $?"
+;;
+
+4)
+clear
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo "¨Você está multiplicando!¨"
+echo "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+echo
+
+. calculadora2
+echo -n "Digite os valores: "
+mult
+echo "O resultado é : $?"
+;;
+
+5)
+
+saida="sim"
+
+
+;;
+esac
+done

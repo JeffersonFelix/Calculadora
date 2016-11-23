@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function somar {
+	read -a valor
+	return $[ ${valor[0]} + ${valor[2]} ]
+}
+
+function sub {
+	read -a valo
+	return $[ ${valo[0]} - ${valo[2]} ]
+}
+
+function div {
+	read -a val
+	if [ ${val[2]} -eq 0 ]
+	then
+		echo "Digite um valor maior que zero"
+	else
+
+		return $[ ${val[0]} / ${val[2]} ]
+	fi
+}
+
+function mult {
+	read -a va
+	return $[ ${va[0]} * ${va[2]} ]
+}
