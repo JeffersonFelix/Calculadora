@@ -1,8 +1,15 @@
 #!/bin/bash
 
+#|¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨|
+#| UNIPÊ Centro Univertário de João Pessoa   |
+#| Aluno: Jefferson Felix Gomes              |
+#| Matrícula: 1510010879                     |
+#| Email: jeffersonfelix15@hotmail.com       |
+#¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
+
 function somar {
 	read -a valor
-	return $[ ${valor[0]} + ${valor[2]} ]
+	return $[ ${valor[0]} + ${valor[2]} ] #Utilizando o elemento 0 e 2 do array para realizar a operação
 }
 
 function sub {
@@ -12,7 +19,7 @@ function sub {
 
 function div {
 	read -a val
-	if [ ${val[2]} -eq 0 ]
+	if [ ${val[2]} -eq 0 ] #Tratamento: Caso o divisor sejá igual 0 resultado será 0
 	then
 		echo "Digite um valor maior que zero"
 	else
